@@ -18,4 +18,10 @@ public class SeatController {
     public List<Seat> getAllSeats(){
         return seatService.getAllSeats();
     }
+    @GetMapping("/{id}")
+    public Seat getSeatById(@PathVariable Long id){
+        return seatService.getSeatById(id);
+
+
+    }
 }
