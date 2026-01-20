@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface SeatService {
     Seat holdSeat (Long seatId , Long userID);
 
     List<Seat> getAllSeats();
+
+    Seat getSeatById(Long id);
 }
