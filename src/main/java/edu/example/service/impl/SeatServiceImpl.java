@@ -1,16 +1,18 @@
 package edu.example.service.impl;
 
 import edu.example.model.Seat;
-import edu.example.repository.Seatrepository;
+import edu.example.repository.SeatRepository;
 import edu.example.service.SeatService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SeatServiceImpl implements SeatService {
 
-    private final Seatrepository seatrepository;
+    private final SeatRepository seatrepository;
 
-    public SeatServiceImpl(Seatrepository seatrepository) {
+    public SeatServiceImpl(SeatRepository seatrepository) {
         this.seatrepository = seatrepository;
     }
 
@@ -22,6 +24,11 @@ public class SeatServiceImpl implements SeatService {
     @Override
     public List<Seat> getAllSeats() {
         return List.of();
+    }
+
+    @Override
+    public Seat getSeatById(Long id) {
+        return null;
     }
 }
 
